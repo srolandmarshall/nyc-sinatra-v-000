@@ -1,3 +1,11 @@
-<table>
-
-<table>
+<h1><%=@figure.name%></h1>
+<h3>Title(s)</h3>
+  <ul><% @figure.titles.all.each do |t| %>
+    <li><%= t.name %></li>
+    <% end %>
+  </ul>
+<h3>Landmark(s)</h3>
+  <ul><% @figure.landmarks.all.each do |l| %>
+    <li><%= l.name %></li>
+    <% end %>
+  </ul>
